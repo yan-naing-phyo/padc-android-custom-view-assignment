@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleAvatarImageView">
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CircularProgressIndicator">
+        <attr name="progressBackgroundColor" format="color" />
+        <attr name="progressForegroundColor" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="progressUnit" format="string" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="progressTextSize" format="dimension" />
+    </declare-styleable>
+</resources>
