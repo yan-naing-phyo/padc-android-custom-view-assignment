@@ -1,73 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/margin_medium_2">
+    android:layout_marginHorizontal="@dimen/margin_medium_2"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    app:cardCornerRadius="@dimen/margin_medium_2">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTaskStatus"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_medium_2"
-        android:layout_toStartOf="@id/tvTag"
-        android:text="In progress" />
+        android:padding="@dimen/margin_medium_2">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="#Design" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toStartOf="@id/tvTag"
+            android:text="In progress"
+            android:textAppearance="@style/TextAppearance.App.TitleMedium" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTaskName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvTaskStatus"
-        android:text="Contact page"
-        android:textAppearance="@style/TextAppearance.App.TitleLarge"
-        android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="#Design"
+            android:textAppearance="@style/TextAppearance.App.TitleMedium"
+            android:textColor="@color/grey" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivCommentIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvTaskName"
-        app:srcCompat="@drawable/ic_comment_white_24dp"
-        app:tint="@color/black" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskStatus"
+            android:text="Contact page"
+            android:textAppearance="@style/TextAppearance.App.TitleLarge"
+            android:textStyle="bold" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvNumberOfComments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/ivCommentIcon"
-        android:layout_toEndOf="@id/ivCommentIcon"
-        android:text="3" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCommentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTaskName"
+            android:layout_marginTop="@dimen/margin_large"
+            app:srcCompat="@drawable/ic_comment_white_24dp"
+            app:tint="@color/grey" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivAttachIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/tvNumberOfComments"
-        android:layout_toEndOf="@id/tvNumberOfComments"
-        app:srcCompat="@drawable/ic_attach_file_white_24dp"
-        app:tint="@color/black" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivCommentIcon"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/ivCommentIcon"
+            android:text="3"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvNumberOfAttachments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/ivAttachIcon"
-        android:layout_toEndOf="@id/ivAttachIcon"
-        android:text="5" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAttachIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivCommentIcon"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_toEndOf="@id/tvNumberOfComments"
+            app:srcCompat="@drawable/ic_attach_file_white_24dp"
+            app:tint="@color/grey" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTaskNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/tvNumberOfAttachments"
-        android:layout_toEndOf="@id/tvNumberOfAttachments"
-        android:text="No 163" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfAttachments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvNumberOfComments"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/ivAttachIcon"
+            android:text="5"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium" />
 
-</RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvNumberOfAttachments"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_toStartOf="@id/viewPodAssigneeList"
+            android:text="No 163"
+            android:textAppearance="@style/TextAppearance.App.BodySmall" />
+
+        <include
+            android:id="@+id/viewPodAssigneeList"
+            layout="@layout/view_pod_assignee_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivCommentIcon"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
