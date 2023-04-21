@@ -27,7 +27,7 @@
 
     <com.yan.padccustomviewassignment.ui.components.CircleImageView
         android:id="@+id/ivProfile"
-        android:layout_width="@dimen/dimen_width_dialog_profile_image"
+        android:layout_width="@dimen/width_dialog_profile_image"
         android:layout_height="@dimen/height_dialog_profile_image"
         android:elevation="@dimen/margin_medium_3"
         android:scaleType="centerCrop"
