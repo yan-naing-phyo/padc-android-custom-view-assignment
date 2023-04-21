@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yan.padccustomviewassignment.ui.viewpods.AssigneeListViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAssignees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.yan.padccustomviewassignment.ui.viewpods.AssigneeListViewPod>
