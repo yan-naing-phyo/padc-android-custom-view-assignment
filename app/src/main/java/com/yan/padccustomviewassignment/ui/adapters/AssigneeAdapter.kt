@@ -4,8 +4,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.google.android.material.card.MaterialCardView
 import com.yan.padccustomviewassignment.R
 import com.yan.padccustomviewassignment.data.vos.AssigneeVO
 import com.yan.padccustomviewassignment.ui.components.CircleImageView
@@ -15,8 +17,7 @@ import com.yan.padccustomviewassignment.ui.viewholders.AssigneeViewHolder
 class AssigneeAdapter(
     private val mAvatarSize: Int,
     private val mProfileDelegate: ProfileDelegate
-) :
-    ListAdapter<AssigneeVO, AssigneeViewHolder>(AssigneeDiffUtil()) {
+) : ListAdapter<AssigneeVO, AssigneeViewHolder>(AssigneeDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssigneeViewHolder {
         val context = parent.context
 
@@ -33,8 +34,8 @@ class AssigneeAdapter(
             setStrokeWidth(context.resources.getDimension(R.dimen.margin_small))
         }
 
+        // Create a new RelativeLayout for container view.
         val relativeLayout = RelativeLayout(context)
-        // Add circle image view to viewGroup.
         relativeLayout.addView(circleImageView)
 
         return AssigneeViewHolder(relativeLayout, circleImageView.id, mProfileDelegate)
