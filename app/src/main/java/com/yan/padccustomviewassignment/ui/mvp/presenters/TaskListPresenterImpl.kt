@@ -27,4 +27,8 @@ class TaskListPresenterImpl : TaskListPresenter, ViewModel() {
     override fun onTapProfile() {
 
     }
+
+    override fun onTapNewTask() {
+
+    }
 }
