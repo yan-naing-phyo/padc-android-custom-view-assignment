@@ -42,9 +42,16 @@
     <dimen name="text_regular_3x">20sp</dimen>
     <dimen name="text_regular_3x_22">22sp</dimen>
     <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_1x_30">30sp</dimen>
     <dimen name="text_heading_2x">32sp</dimen>
     <dimen name="text_big">40sp</dimen>
     <dimen name="text_big_2x">60sp</dimen>
     <dimen name="text_big_3x">80sp</dimen>
     <dimen name="text_size_18">18sp</dimen>
+
+    <dimen name="width_circular_progress">60dp</dimen>
+    <dimen name="height_circular_progress">60dp</dimen>
+    <dimen name="width_dialog_profile_image">120dp</dimen>
+    <dimen name="height_dialog_profile_image">120dp</dimen>
+    <dimen name="min_height_chip">40dp</dimen>
 </resources>
