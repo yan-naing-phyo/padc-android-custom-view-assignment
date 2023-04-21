@@ -22,6 +22,9 @@ class AssigneeViewHolder(
 
     fun bind(assigneeVO: AssigneeVO) {
         if (assigneeVO == AssigneeVO.NEW_TASK) {
+            itemView.setOnClickListener {
+                mProfileDelegate.onTapNewTask()
+            }
             mImageView.apply {
                 // Set add icon as image src.
                 setImageDrawable(
