@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">PADC Custom View Assignment</string>
+    <string name="label_create_additional_pages">Create additional\npages</string>
+    <string name="label_closed_tasks">Closed tasks</string>
+    <string name="label_open_tasks">Open tasks</string>
+    <string name="label_message">MESSAGE</string>
+    <string name="label_project_tasks">Project Tasks</string>
+    <string name="label_contacts">Contacts</string>
+    <string name="label_about_you">About you</string>
+    <string name="label_client">Client</string>
+    <string name="label_project_name">PROJECT NAME</string>
+    <string name="label_project_date">PROJECT DATE</string>
+    <string name="label_assignee">ASSIGNEE</string>
+    <string name="label_category">CATEGORY</string>
+    <string name="action_save">Save</string>
+    <string name="label_design">Design</string>
+    <string name="label_attachments">ATTACHMENTS</string>
+    <string name="label_create_task">CREATE TASK</string>
 </resources>
