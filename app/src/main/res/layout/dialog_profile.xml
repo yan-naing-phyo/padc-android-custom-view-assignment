@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/margin_xxlarge" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProfileStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProfileEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <com.yan.padccustomviewassignment.ui.components.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/dimen_width_dialog_profile_image"
+        android:layout_height="@dimen/height_dialog_profile_image"
+        android:elevation="@dimen/margin_medium_3"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@id/guidelineProfileEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineProfileStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showActive="true"
+        app:srcCompat="@drawable/placeholder_bcs"
+        app:strokeWidth="@dimen/margin_small" />
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_solid_dialog_profile"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvClosedTasksLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/label_closed_tasks"
+        android:textAppearance="@style/TextAppearance.App.LabelMedium"
+        app:layout_constraintEnd_toStartOf="@id/guidelineProfileStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumOfClosedTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="361"
+        android:textAppearance="@style/TextAppearance.App.BodyMedium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvClosedTasksLabel"
+        app:layout_constraintStart_toStartOf="@id/tvClosedTasksLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvClosedTasksLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOpenTasksLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/label_open_tasks"
+        android:textAppearance="@style/TextAppearance.App.LabelMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineProfileEnd"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumOfOpenTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textAppearance="@style/TextAppearance.App.BodyMedium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvOpenTasksLabel"
+        app:layout_constraintStart_toStartOf="@id/tvOpenTasksLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvOpenTasksLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Zachary Butler"
+        android:textAppearance="@style/TextAppearance.App.HeadlineLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UI Designer"
+        android:textAppearance="@style/TextAppearance.App.BodyMedium"
+        android:textColor="@color/colorSecondaryText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/bg_solid_btn_rounded"
+        android:paddingHorizontal="@dimen/margin_xxlarge"
+        android:paddingVertical="@dimen/margin_medium_2"
+        android:text="@string/label_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRole" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:background="@drawable/bg_stroke_btn_round_icon"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessage"
+        app:layout_constraintEnd_toStartOf="@id/btnMessage"
+        app:layout_constraintTop_toTopOf="@id/btnMessage"
+        app:srcCompat="@drawable/ic_share_white_24dp"
+        app:tint="@color/colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btnMessage"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/btnMessage"
+        android:background="@drawable/bg_stroke_btn_round_icon"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessage"
+        app:layout_constraintStart_toEndOf="@id/btnMessage"
+        app:layout_constraintTop_toTopOf="@id/btnMessage"
+        app:srcCompat="@drawable/ic_task_white_24dp"
+        app:tint="@color/colorAccent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMessage"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimaryText"
+        app:tabTextAppearance="@style/TextAppearance.App.Tab"
+        app:tabTextColor="@color/colorSecondaryText" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayoutProfile" />
+</androidx.constraintlayout.widget.ConstraintLayout>
