@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            app:elevation="0dp"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvClientLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/label_client"
+                android:textAppearance="@style/TextAppearance.App.LabelMedium" />
+
+            <com.yan.padccustomviewassignment.ui.components.CircleImageView
+                android:id="@+id/ivClientImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/tvClientLabel"
+                android:layout_alignStart="@id/tvClientLabel"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/placeholder_bcs"
+                app:strokeWidth="0dp" />
+
+            <Spinner
+                android:id="@+id/spinnerClient"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivClientImage"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/ivClientImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProjectNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivClientImage"
+                android:layout_alignStart="@id/ivClientImage"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/label_project_name"
+                android:textAppearance="@style/TextAppearance.App.LabelMedium" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectNameLabel"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:backgroundTint="@color/grey"
+                android:padding="@dimen/margin_medium_2"
+                android:text="Create additional pages"
+                android:textAppearance="@style/TextAppearance.App.BodyMedium"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProjectDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etProjectName"
+                android:layout_alignStart="@id/etProjectName"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/label_project_date"
+                android:textAppearance="@style/TextAppearance.App.LabelMedium" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/durationSpinners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectDuration"
+                android:weightSum="1">
+
+                <Spinner
+                    android:id="@+id/spinnerStartDate"
+                    style="@style/SpinnerStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="0.4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="\u2014"
+                    android:textColor="@color/grey" />
+
+                <Spinner
+                    android:id="@+id/spinnerEndDate"
+                    style="@style/SpinnerStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_weight="0.4" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAssigneeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/durationSpinners"
+                android:layout_alignStart="@id/tvClientLabel"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/label_assignee"
+                android:textAppearance="@style/TextAppearance.App.LabelMedium" />
+
+            <include
+                android:id="@+id/viewPodAssigneeList"
+                layout="@layout/view_pod_assignee_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAssigneeLabel"
+                android:layout_alignStart="@id/tvAssigneeLabel"
+                android:layout_marginTop="@dimen/margin_medium_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewPodAssigneeList"
+                android:layout_alignStart="@id/viewPodAssigneeList"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/label_category"
+                android:textAppearance="@style/TextAppearance.App.LabelMedium" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategoryLabel"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/ChipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_design" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/ChipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_design"
+                    app:chipIcon="@drawable/ic_check_white_24dp"
+                    app:chipIconEnabled="false"
+                    app:chipIconVisible="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/ChipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_design" />
+            </com.google.android.material.chip.ChipGroup>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
